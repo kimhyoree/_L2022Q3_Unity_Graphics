@@ -21,13 +21,15 @@ public class Light_Controller : MonoBehaviour
             print("L down"); //L키를 누를 때마다
             print(Light.name);
             isOn = !isOn; //트루를 폴스로 폴스를 트루로 바꿔주는 코드
-            Light.SetActive(false);
+            Light.SetActive(isOn);
         }
     }
 
     private void OnMouseDown()
     {
         print(gameObject.name + "mouse down");
+        isOn = !isOn; //트루를 폴스로 폴스를 트루로 바꿔주는 코드
+        Light.SetActive(isOn);
     }
 
 }
